@@ -21,6 +21,7 @@ window.onload = function() {
             errors.push('El nombre debe tener al menos 5 caracteres')
             inputName.classList.add('is-invalid')
         } else {
+            errors.pop()
             inputName.classList.remove('is-invalid')
             selectSection.focus();
         }
@@ -30,6 +31,7 @@ window.onload = function() {
             errors.push('Debe elegirse una sección')
             selectSection.classList.add('is-invalid')
         } else {
+            errors.pop()
             selectSection.classList.remove('is-invalid')
             selectCollection.focus();
         }
@@ -39,6 +41,7 @@ window.onload = function() {
             errors.push('Debe elegirse una colección')
             selectCollection.classList.add('is-invalid')
         } else {
+            errors.pop()
             selectCollection.classList.remove('is-invalid')
             selectBrand.focus();
         }
@@ -48,6 +51,7 @@ window.onload = function() {
             errors.push('Debe elegirse una marca')
             selectBrand.classList.add('is-invalid')
         } else {
+            errors.pop()
             selectBrand.classList.remove('is-invalid')
             inputPrice.focus();
         }
@@ -57,6 +61,7 @@ window.onload = function() {
             errors.push('El campo precio está vacío')
             inputPrice.classList.add('is-invalid')
         } else {
+            errors.pop()
             inputPrice.classList.remove('is-invalid')
             inputDiscount.focus();
         }
@@ -69,6 +74,7 @@ window.onload = function() {
             errors.push('La descripción debe tener al menos 20 caracteres')
             textareaDescription.classList.add('is-invalid')
         } else {
+            errors.pop()
             textareaDescription.classList.remove('is-invalid')
             inputImage.focus();
         }
@@ -81,6 +87,7 @@ window.onload = function() {
             errors.push(`Debes subir una imagen con alguna de las extensiones permitidas: ${acceptedExtensions.join(', ')}`);
             inputImage.classList.add('is-invalid');
         } else {
+            errors.pop()
             inputImage.classList.remove('is-invalid');
             inputName.focus();
         }
